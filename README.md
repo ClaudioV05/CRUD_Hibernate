@@ -1,2 +1,2 @@
-# CRUD_hibernate
-These API service is the CRUD using hibernate with the architecture pattern Domain-Driven Design(DDD).
+# Hibernate_Project
+These API service is the test of 'Programação em Java do básico ao avançado'
