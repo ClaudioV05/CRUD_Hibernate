@@ -18,21 +18,22 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    private Contact contato() {
-        return new Contact("Seu nome","http://www.seusite.com.br","voce@seusite.com.br");
+    private Contact contact() {
+        return new Contact("Claudiomildo Ventura","https://www.linkedin.com/in/claudiomildoventura/","claudiomildo@hotmail.com");
     }
 
     private ApiInfoBuilder apiInformation() {
 
         ApiInfoBuilder apiInfoBuilder = new ApiInfoBuilder();
 
-        apiInfoBuilder.title("Title - Rest API");
-        apiInfoBuilder.description("API exemplo de uso de Springboot REST API");
+        apiInfoBuilder.title("Title - Crud Hibernate");
+        apiInfoBuilder.description("About\n" +
+                "These API service is the CRUD using hibernate with the architecture pattern Domain-Driven Design(DDD).");
         apiInfoBuilder.version("1.0");
-        apiInfoBuilder.termsOfServiceUrl("Termo de uso: Open Source");
-        apiInfoBuilder.license("Licença - Sua Empresa");
-        apiInfoBuilder.licenseUrl("http://www.seusite.com.br");
-        apiInfoBuilder.contact(this.contato());
+        apiInfoBuilder.termsOfServiceUrl("Use term: Open Source");
+        apiInfoBuilder.license("License");
+        apiInfoBuilder.licenseUrl("https://www.linkedin.com/in/claudiomildoventura/");
+        apiInfoBuilder.contact(this.contact());
 
         return apiInfoBuilder;
 
@@ -51,13 +52,4 @@ public class SwaggerConfig {
 
         return docket;
     }
-
-//    @Bean
-//    public Docket api() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .select()
-//                .apis(RequestHandlerSelectors.any())
-//                .paths(PathSelectors.any())
-//                .build();
-//    }
 }
