@@ -1,4 +1,4 @@
-package com.tbp.crud.config;
+package com.crud.hibernate.configs;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -14,6 +14,9 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * Swagger config.
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {

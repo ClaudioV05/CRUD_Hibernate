@@ -1,9 +1,11 @@
-package com.tbp.crud.dao;
+package com.crud.hibernate.repositories;
 
+import com.crud.hibernate.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.tbp.crud.entity.User;
-
+/**
+ * User repository.
+ */
 public interface UserRepository extends JpaRepository<User, Integer> {
 
 }

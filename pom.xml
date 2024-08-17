@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.techbulletinprime</groupId>
-	<artifactId>spring-boot-crud-data-jpa-h2db</artifactId>
+	<artifactId>spring-boot-crud-hibernate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-crud-jpa-h2</name>
 	<description>Spring boot  crud example with data jpa and h2 in memory database</description>

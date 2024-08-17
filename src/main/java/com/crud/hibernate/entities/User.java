@@ -1,9 +1,12 @@
-package com.tbp.crud.entity;
+package com.crud.hibernate.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * User entity.
+ */
 @Entity
 public class User {
     @Id

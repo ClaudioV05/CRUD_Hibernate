@@ -1,14 +1,17 @@
-package com.tbp.crud.service;
+package com.crud.hibernate.services;
 
 import java.util.List;
 import java.util.Optional;
 
+import com.crud.hibernate.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.tbp.crud.dao.UserRepository;
-import com.tbp.crud.entity.User;
+import com.crud.hibernate.repositories.UserRepository;
 
+/**
+ * User service.
+ */
 @Service
 public class UserService {
 	@Autowired
