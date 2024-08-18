@@ -26,32 +26,40 @@ public class SwaggerConfig {
     }
 
     private ApiInfoBuilder apiInformation() {
+        final String openApiTitle = "Crud Hibernate";
+        final String openApiDescription = "About\n" + "These API service is the CRUD using hibernate with the architecture pattern Domain-Driven Design(DDD).";
+        final String openApiVersion = "1.0";
+        final String openApiTermsOfServiceUrl = "-";
+        final String openApiLicense = "application/json";
+        final String openApiLicenseUrl = "https://www.linkedin.com/in/claudiomildoventura/";
 
         ApiInfoBuilder apiInfoBuilder = new ApiInfoBuilder();
 
-        apiInfoBuilder.title("Title - Crud Hibernate");
-        apiInfoBuilder.description("About\n" +
-                "These API service is the CRUD using hibernate with the architecture pattern Domain-Driven Design(DDD).");
-        apiInfoBuilder.version("1.0");
-        apiInfoBuilder.termsOfServiceUrl("Use term: Open Source");
-        apiInfoBuilder.license("License");
-        apiInfoBuilder.licenseUrl("https://www.linkedin.com/in/claudiomildoventura/");
+        apiInfoBuilder.title(openApiTitle);
+        apiInfoBuilder.description(openApiDescription);
+        apiInfoBuilder.version(openApiVersion);
+        apiInfoBuilder.termsOfServiceUrl(openApiTermsOfServiceUrl);
+        apiInfoBuilder.license(openApiLicense);
+        apiInfoBuilder.licenseUrl(openApiLicenseUrl);
         apiInfoBuilder.contact(this.contact());
 
         return apiInfoBuilder;
-
     }
+
     @Bean
     public Docket apiDetail() {
+        String packageNameController = "com.crud.hibernate.controllers";
+        String produces = "application/json";
+
         Docket docket = new Docket(DocumentationType.SWAGGER_2);
 
         docket.select()
-              .apis(RequestHandlerSelectors.basePackage("com.tbp.crud.controller"))
+              .apis(RequestHandlerSelectors.basePackage(packageNameController))
               .paths(PathSelectors.any())
               .build()
               .apiInfo(this.apiInformation().build())
-              .consumes(new HashSet<String>(Arrays.asList("application/json")))
-              .produces(new HashSet<String>(Arrays.asList("application/json")));
+              .consumes(new HashSet<String>(Arrays.asList(produces)))
+              .produces(new HashSet<String>(Arrays.asList(produces)));
 
         return docket;
     }
